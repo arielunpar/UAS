@@ -69,7 +69,3 @@ function clearForm() {
   signupEmailInput.value = "";
   signupPasswordInput.value = "";
 }
-
-signinAnchor.addEventListener("click", function () {
-  window.location.href = "signIn.html";
-});
