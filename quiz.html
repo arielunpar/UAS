@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="src/Quiz/CSS/quiz.css">
+    <title>Tes Kemampuan</title>
+</head>
+
+<body>
+    <div class = "container">
+        <div id="loader"></div>
+        <div id="quizContainer" class="hidden">
+
+            <div id="hud">
+                <div id="hud-item">
+                    <p class="hud-prefix" style="color: #ded4f6;">
+                    Progress :
+                    </p>
+                    <div id="progressBar">
+                        <div id="progressBarCurrent"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="quiz-wrapper">
+                <div id="quiz"></div>
+            </div>
+
+            <button class="btn" id="previous">
+                <p>Previous Question</p>
+            </button>
+
+            <button class="btn" id="next">
+                <p>Next Question</p>
+            </button>
+
+            <button class="btn" id="submit">
+                <p>Submit</p>
+            </button>
+        </div>
+    </div>
+    
+    <script src="src/Quiz/Javascript/quiz.js"></script>
+</body>
+
+</html>

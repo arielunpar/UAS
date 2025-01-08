@@ -1,0 +1,58 @@
+dataItems = [
+    {
+      id: "kursusOptimasi",
+      name: "Kursus Optimasi 1 Bulan",
+      price: 200000,
+      desc: "Akses penuh untuk materi yang berhubungan dengan kursus optimasi untuk jangka waktu 1 bulan.",
+      img: "images/Opdim.webp",
+    },
+    {
+      id: "kursusAktuaria",
+      name: "Kursus Aktuaria 1 Bulan",
+      price: 200000,
+      desc: "Akses penuh untuk materi yang berhubungan dengan kursus aktuaria untuk jangka waktu 1 bulan.",
+      img: "images/Aktuaris.webp",
+    },
+    {
+      id: "kursusAnalitikaData",
+      name: "Kursus Analitika Data 1 Bulan",
+      price: 200000,
+      desc: "Akses penuh untuk materi yang berhubungan dengan kursus analitika data untuk jangka waktu 1 bulan.",
+      img: "images/DataAnalis.webp",
+    },
+    {
+      id: "kursusMatMurni",
+      name: "Kursus Matematika Terapan 1 Bulan",
+      price: 200000,
+      desc: "Akses penuh untuk materi yang berhubungan dengan kursus matematika terapan untuk jangka waktu 1 bulan.",
+      img: "images/MatTerapan.webp",
+    },
+    {
+      id: "bukuAktuaria",
+      name: "Loss Models: from Data to Decisions",
+      price: 130000,
+      desc: "Buku pelengkap untuk kursus aktuaria",
+      img: "images/img-5.png"
+    },
+    {
+      id: "bukuAnalitikaData",
+      name: "Neural Networks and Deep Learning",
+      price: 110000,
+      desc: "Buku pelengkap untuk kursus analitika data",
+      img: "images/img-6.png"
+    },
+    {
+      id: "bukuOptimasi",
+      name: "Operations Research: An Introduction",
+      price: 80000,
+      desc: "Buku pelengkap untuk kursus optimasi",
+      img: "images/img-7.png"
+    },
+    {
+      id: "bukuMatMurni",
+      name: "Elementary Linear Algebra",
+      price: 175000,
+      desc: "Buku pelengkap untuk kursus matematika terapan",
+      img: "images/img-8.png"
+    }
+  ];

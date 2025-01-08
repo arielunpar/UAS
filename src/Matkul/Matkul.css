@@ -1,0 +1,453 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Kumbh Sans", sans-serif;
+  
+  }
+
+body{
+    color: #40514E;
+    margin: 0;
+    text-align: center;
+}
+  
+  /* Bagian untuk navbar*/
+  /* diberikan position sticky agar tetap menempel dan z index yang tinggi agar selalu diatas */
+  .navbar{
+    background: #164646;
+    height: 80px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 13px;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+  }
+  
+  /* merupakan container untuk item item di navbar */
+  /* justify-content : space between agar terpisah item di navbarnya */
+  .navbar__container {
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    z-index: 1;
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 50px;
+  
+  }
+  
+  /* untuk item navbar berisi logo dan shopping cart */
+  .navbar__main{
+    display: flex;
+    align-items: center;
+  }
+  
+  /* tombol shopping cart */
+  #cart__button{
+    height: 56.25%;
+    margin-right:20px;
+  }
+  
+  .cart {
+    position: relative;
+    background-color: #fff;
+    color: #212529;
+    font-size: 30px;
+    padding: 5px;
+    border-radius: 4px;
+  }
+  .cartAmount {
+    position: absolute;
+    top: -15px;
+    right: -10px;
+    font-size: 16px;
+    background-color: red;
+    color: white;
+    padding: 3px;
+    border-radius: 3px;
+  }
+  
+  /* Mengatur tulisan Tutor Online */
+  #navbar__logo{
+    background-color: #ff8;
+    background-image: linear-gradient(to top, #5aa020 0%, #a1ea8f 100%);
+    background-size: 100%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    font-size: 2rem;
+  
+  }
+  
+  /* mengatur isi konten menu (tombol home dll) */
+  .navbar__menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    text-align: center;
+  }
+  
+  /* untuk item item dalam menu */
+  .navbar__item {
+    height: 80px ;
+  
+  }
+  
+  /* untuk link di menu */
+  .navbar__links{
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    padding: 0 1rem;
+    height: 100%;
+  }
+  
+  /*untuk kotak tes kemampuan */
+  .navbar__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1rem;
+    width: 100%;
+  
+  }
+
+  /* Untuk mengatur button tes kemampuan*/ 
+.buttonGreen{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    padding: 10px 20px;
+    height: 100%;
+    width: 100%;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    background: #a1ea8f;
+    color: #5e5c5c;
+  }
+  
+  /* ketika kursor di button tes kemampuan */ 
+  .buttonGreen:hover {
+    background: #131313;
+    transition: all 0.3s ease;
+  
+  }
+  
+  .buttonRed{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    padding: 10px 20px;
+    height: 100%;
+    width: 100%;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    background: #fc7703;
+    color: #5e5c5c;
+  }
+  
+  /* ketika kursor di button tes kemampuan */ 
+  .buttonRed:hover {
+    background: #131313;
+    transition: all 0.3s ease;
+  
+  }
+  
+  /* Ketika kursor di link */ 
+  .navbar__links:hover{
+    color: #a1ea8f;
+    transition: all 0.3s ease;
+  }
+  
+  /* Untuk Tampilan Mobile (ketika screen lebih kecil dari 1000px */
+  @media screen and (max-width: 1000px){
+    .navbar__container {
+        display: flex;
+        justify-content: space-between;
+        height: 80px;
+        z-index: 1;
+        width: 100%;
+        max-width: 1300px;
+        padding: 0;
+    }
+  
+    /* menu akan tersembunyi ketika belum aktif */
+    .navbar__menu{
+        display: grid;
+        grid-template-columns: auto;
+        margin: 0;
+        width: 100%;
+        position: absolute;
+        top: -1000px;
+        opacity: 1;
+        transition: all 0.5s ease;
+        height: 50vh;
+        z-index: -1;
+        background: #164646;
+    }
+  
+    /* mengatur isi konten ketika menu aktif*/
+    .navbar__menu.active{
+        background: #164646;
+        top: 100%;
+        opacity: 1;
+        transition: all 0.5s ease;
+        z-index: 99;
+        height: 60vh;
+        font-size: 1.6rem;
+  
+    }
+  
+    /* untuk tombol cart */
+    #cart__button{
+        padding-left: 25px;
+  
+    }
+  
+    /* Mengatur 3 garis */
+    .navbar__toggle .bar {
+        width: 25px;
+        height: 3px;
+        margin: 5px auto;
+        transition: all 0.5s ease-in-out;
+        background: #fff;
+  
+    }
+  
+  
+    .navbar__item{
+        width: 100%;
+    }
+  
+    
+    .navbar__links {
+        text-align: center;
+        padding: 2rem;
+        width: 100%;
+        display: table;
+    }
+    
+    .navbar__btn {
+        padding-bottom: 2rem;
+    }
+    
+    .button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+        height: 80px;
+        margin: 0;
+    }
+    
+    #mobile-menu {
+        position: absolute;
+        top: 20%;
+        right: 5%;
+        transform: translate(5%, 20%);
+    }
+  
+  
+    .navbar__btn {
+        padding-bottom: 2rem;
+    }
+    
+    
+    .button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+        height: 80px;
+        margin: 0;
+    }
+    
+    
+    /* ketika kursor diatas tiga garis*/
+    .navbar__toggle .bar {
+        display: block;
+        cursor: pointer;
+    }
+    
+    /* menghilangkan garis kedua saat dipencet */
+    #mobile-menu.is-active .bar:nth-child(2) {
+        opacity: 0;
+    }
+    
+    /* memutar garis pertama 45 derajat */
+    #mobile-menu.is-active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+    
+    /* memutar garis ketiga 45 derajat */
+    #mobile-menu.is-active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+  }
+
+
+.main__content p{
+    line-height: 2;
+    color: white;
+}
+
+hr{
+    border: dotted #EAF6F6 6px;
+    border-bottom: none;
+    width: 5%;
+    margin: 100px auto;
+}
+
+.main__content a{
+    color: #11999E;
+    font-family: 'Montserrat', sans-serif;
+    margin: 10px 20px;
+    text-decoration: none;
+}
+
+.main__content a:hover{
+    color: #EAF6F6;
+    
+}
+
+.main__content h1{
+    color: #66BFBF;
+    font-family: 'Sacramento', cursive;
+    margin: 50px auto 0 auto;
+    font-size: 5.625rem;                /* 100% = 16px  ... 90px/16=562.5%  //1em=16px=100% */ 
+}
+
+.main__content h2{
+    color: #66BFBF;
+    font-weight: normal;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem;
+    margin-top: 100px;
+    padding-bottom: 10px;
+}
+
+.main__content h3{
+    color: #11999E;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.top-container{
+    background-color: #E4F9F5;      /*  #E4F9F5;  */
+    position: relative;
+    padding-top: 100px;
+}
+
+.coppyright{
+    color: #EAF6F6;
+    font-size: 0.75rem;
+    padding: 20px 0;
+}
+
+.top-cloud{
+    position: absolute;
+    right: 300px;
+    top: 40px;
+}
+
+.bottom-cloud{
+    position: absolute;
+    left: 250px;
+    bottom: 300px;
+
+}
+
+.middle-container{
+    margin: auto;
+    background: #131313;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+      
+}
+
+.bottom-container{
+    background-color: #164646;
+    padding: 50px 0 20px;
+    color: #11cdd4;
+}
+
+.skill-row{
+    width: 50%;
+    margin: 100px auto 100px auto;
+    text-align: left;
+    line-height: 2;
+}
+
+.pro{
+    text-decoration: underline;
+}
+
+.intro{
+    width: 30%;
+    margin: auto;
+}
+
+.contact-message{
+    width: 40%;
+    margin: 40px auto 60px;
+}
+
+.code-img{
+    width: 25%;
+    border-radius: 60%;
+    float: left;
+    margin-right: 30px;
+}
+
+.chilli{
+    width: 25%;
+    float: right;
+    margin-left: 30px;
+    border-radius: 100%;
+}
+
+.shop_btn {
+    background: #11cdd4;
+    background-image: -webkit-linear-gradient(top, #11cdd4, #11999e);
+    background-image: -moz-linear-gradient(top, #11cdd4, #11999e);
+    background-image: -ms-linear-gradient(top, #11cdd4, #11999e);
+    background-image: -o-linear-gradient(top, #11cdd4, #11999e);
+    background-image: linear-gradient(to bottom, #11cdd4, #11999e);
+    -webkit-border-radius: 8;
+    -moz-border-radius: 8;
+    border-radius: 8px;
+    font-family: 'Montserrat', sans-serif;
+    color: #ffffff;
+    font-size: 20px;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+    margin: auto;
+
+}
+  
+.shop_btn:hover {
+    background: #30e3cb;
+    background-image: -webkit-linear-gradient(top, #30e3cb, #2bc4ad);
+    background-image: -moz-linear-gradient(top, #30e3cb, #2bc4ad);
+    background-image: -ms-linear-gradient(top, #30e3cb, #2bc4ad);
+    background-image: -o-linear-gradient(top, #30e3cb, #2bc4ad);
+    background-image: linear-gradient(to bottom, #30e3cb, #2bc4ad);
+    text-decoration: none;
+}

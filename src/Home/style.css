@@ -1,0 +1,741 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Kumbh Sans", sans-serif;
+
+}
+
+/* Bagian untuk navbar*/
+/* diberikan position sticky agar tetap menempel dan z index yang tinggi agar selalu diatas */
+.navbar{
+  background: #164646;
+  height: 80px;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 13px;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+/* merupakan container untuk item item di navbar */
+/* justify-content : space between agar terpisah item di navbarnya */
+.navbar__container {
+  display: flex;
+  justify-content: space-between;
+  height: 80px;
+  z-index: 1;
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 50px;
+
+}
+
+/* untuk item navbar berisi logo dan shopping cart */
+.navbar__main{
+  display: flex;
+  align-items: center;
+}
+
+/* tombol shopping cart */
+#cart__button{
+  height: 56.25%;
+  margin-right:20px;
+}
+
+.cart {
+  position: relative;
+  background-color: #fff;
+  color: #212529;
+  font-size: 30px;
+  padding: 5px;
+  border-radius: 4px;
+}
+.cartAmount {
+  position: absolute;
+  top: -15px;
+  right: -10px;
+  font-size: 16px;
+  background-color: red;
+  color: white;
+  padding: 3px;
+  border-radius: 3px;
+}
+
+/* Mengatur tulisan Tutor Online */
+#navbar__logo{
+  background-color: #ff8;
+  background-image: linear-gradient(to top, #5aa020 0%, #a1ea8f 100%);
+  background-size: 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  font-size: 2rem;
+
+}
+
+/* mengatur isi konten menu (tombol home dll) */
+.navbar__menu {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  text-align: center;
+}
+
+/* untuk item item dalam menu */
+.navbar__item {
+  height: 80px ;
+
+}
+
+/* untuk link di menu */
+.navbar__links{
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  padding: 0 1rem;
+  height: 100%;
+}
+
+/*untuk kotak tes kemampuan */
+.navbar__btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 1rem;
+  width: 100%;
+
+}
+
+/* Untuk mengatur button tes kemampuan*/ 
+.buttonGreen{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  padding: 10px 20px;
+  height: 100%;
+  width: 100%;
+  border: none;
+  outline: none;
+  border-radius: 4px;
+  background: #a1ea8f;
+  color: #5e5c5c;
+}
+
+/* ketika kursor di button tes kemampuan */ 
+.buttonGreen:hover {
+  background: #131313;
+  transition: all 0.3s ease;
+
+}
+
+.buttonRed{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  padding: 10px 20px;
+  height: 100%;
+  width: 100%;
+  border: none;
+  outline: none;
+  border-radius: 4px;
+  background: #fc7703;
+  color: #5e5c5c;
+}
+
+/* ketika kursor di button tes kemampuan */ 
+.buttonRed:hover {
+  background: #131313;
+  transition: all 0.3s ease;
+
+}
+
+/* Ketika kursor di link */ 
+.navbar__links:hover{
+  color: #a1ea8f;
+  transition: all 0.3s ease;
+}
+
+/* Untuk Tampilan Mobile (ketika screen lebih kecil dari 1000px */
+@media screen and (max-width: 1000px){
+  .navbar__container {
+      display: flex;
+      justify-content: space-between;
+      height: 80px;
+      z-index: 1;
+      width: 100%;
+      max-width: 1300px;
+      padding: 0;
+  }
+
+  /* menu akan tersembunyi ketika belum aktif */
+  .navbar__menu{
+      display: grid;
+      grid-template-columns: auto;
+      margin: 0;
+      width: 100%;
+      position: absolute;
+      top: -1000px;
+      opacity: 1;
+      transition: all 0.5s ease;
+      height: 50vh;
+      z-index: -1;
+      background: #164646;
+  }
+
+  /* mengatur isi konten ketika menu aktif*/
+  .navbar__menu.active{
+      background: #164646;
+      top: 100%;
+      opacity: 1;
+      transition: all 0.5s ease;
+      z-index: 99;
+      height: 60vh;
+      font-size: 1.6rem;
+
+  }
+
+  /* untuk tombol cart */
+  #cart__button{
+      padding-left: 25px;
+
+  }
+
+  /* Mengatur 3 garis */
+  .navbar__toggle .bar {
+      width: 25px;
+      height: 3px;
+      margin: 5px auto;
+      transition: all 0.5s ease-in-out;
+      background: #fff;
+
+  }
+
+
+  .navbar__item{
+      width: 100%;
+  }
+
+  
+  .navbar__links {
+      text-align: center;
+      padding: 2rem;
+      width: 100%;
+      display: table;
+  }
+  
+  .navbar__btn {
+      padding-bottom: 2rem;
+  }
+  
+  .button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 80%;
+      height: 80px;
+      margin: 0;
+  }
+  
+  #mobile-menu {
+      position: absolute;
+      top: 20%;
+      right: 5%;
+      transform: translate(5%, 20%);
+  }
+
+
+  .navbar__btn {
+      padding-bottom: 2rem;
+  }
+  
+  
+  .button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 80%;
+      height: 80px;
+      margin: 0;
+  }
+  
+  
+  /* ketika kursor diatas tiga garis*/
+  .navbar__toggle .bar {
+      display: block;
+      cursor: pointer;
+  }
+  
+  /* menghilangkan garis kedua saat dipencet */
+  #mobile-menu.is-active .bar:nth-child(2) {
+      opacity: 0;
+  }
+  
+  /* memutar garis pertama 45 derajat */
+  #mobile-menu.is-active .bar:nth-child(1) {
+      transform: translateY(8px) rotate(45deg);
+  }
+  
+  /* memutar garis ketiga 45 derajat */
+  #mobile-menu.is-active .bar:nth-child(3) {
+      transform: translateY(-8px) rotate(-45deg);
+  }
+}
+
+
+/* Main Content CSS */
+.main {
+  background-color: #767373;
+}
+
+.main__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-self: center;
+  margin: 0 auto;
+  height: 90vh;
+  
+  z-index: 100;
+  width: 100%;
+  padding-right: 50px;
+  padding-left: 50px;
+
+  background-image: linear-gradient(
+      to bottom,
+      rgba(19, 19, 19, 0.6) 0%,
+      rgba(19, 19, 19, 0.8) 50%,  /* Gradasi ringan di pertengahan */
+      rgba(19, 19, 19, 1) 100% 
+    ),
+    url('images/img-11.jpg');
+}
+
+.main__content {
+  color: #fff;
+  width: 100%;
+}
+
+.main__content h1 {
+  font-size: 4rem;
+  background-color: #abf0b9;
+  background-image: linear-gradient(179.1deg, rgb(43, 170, 96) 2.3%, rgb(129, 204, 104) 98.3%);
+  background-size: 100%;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+
+.main__content h2 {
+  font-size: 4rem;
+  margin-top: 10px;
+  background-color: #f9fcff;
+  background-image: linear-gradient(147deg, #f9fcff 0%, #dee4ea 74%);
+  background-size: 100%;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+
+.main__content p {
+  margin-top: 1rem;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.main__img--container {
+  text-align: center;
+}
+
+#main__img {
+  height: 80%;
+  width: 80%;
+}
+
+/* Mobile Responsive */
+@media screen and (max-width: 768px) {
+  .main__container {
+    display: grid;
+    grid-template-columns: auto;
+    align-items: center;
+    justify-self: center;
+    width: 100%;
+    margin: 0 auto;
+    height: 90vh;
+  }
+
+  .main__content {
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+
+  .main__content h1 {
+    font-size: 2.5rem;
+    margin-top: 2rem;
+  }
+
+  .main__content h2 {
+    font-size: 3rem;
+  }
+
+  .main__content p {
+    margin-top: 1rem;
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .main__content h1 {
+    font-size: 2rem;
+    margin-top: 3rem;
+  }
+
+  .main__content h2 {
+    font-size: 2rem;
+  }
+
+  .main__content p {
+    margin-top: 2rem;
+    font-size: 1.5rem;
+  }
+
+  .main__btn {
+    padding: 12px 36px;
+    margin: 2.5rem 0;
+  }
+}
+
+/* Services Section */
+.services {
+  background: #131313;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  padding-top:3rem;
+}
+
+.services h1 {
+  background-color: #77ffa4;
+  background-image: linear-gradient(to right, rgb(182, 244, 146), rgb(51, 139, 147));
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  margin-bottom: 3rem;
+  font-size: 2.5rem;
+}
+
+.services__container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  overflow: hidden;
+}
+
+.services__card {
+  margin: 1rem;
+  height: 525px;
+  width: 400px;
+  border-radius: 4px;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(19, 19, 19, 0) 0%,
+      rgba(19, 19, 19, 0.5) 50%,  /* Gradasi ringan di pertengahan */
+      rgba(19, 19, 19, 1) 100%
+    ),
+    url('images/Aktuaris.webp');
+  background-size: cover;
+  position: relative;
+  color: #fff;
+}
+
+.services__card:before {
+  opacity: 0.2;
+}
+
+.services__card:nth-child(2) {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(17, 17, 17, 0.9) 100%
+    ),
+    url('images/DataAnalis.webp');
+}
+
+.services__card:nth-child(3) {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(17, 17, 17, 0.9) 100%
+    ),
+    url('images/Opdim.webp');
+}
+
+.services__card:nth-child(4) {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(17, 17, 17, 0.9) 100%
+    ),
+    url('images/MatTerapan.webp');
+}
+
+.services__card h2 {
+  position: absolute;
+  top: 350px;
+  left: 30px;
+}
+
+.services__card p {
+  position: absolute;
+  top: 400px;
+  left: 30px;
+}
+
+.services__card button {
+  color: #131313;
+  padding: 10px 20px;
+  border: none;
+  outline: none;
+  border-radius: 4px;
+  background: #a1ea8f;
+  position: absolute;
+  top: 440px;
+  left: 30px;
+  font-size: 1rem;
+}
+
+.services__card button:hover {
+  cursor: pointer;
+}
+
+.services__card:hover {
+  transform: scale(1.075);
+  transition: 0.2s ease-in;
+}
+
+/* Footer CSS */
+.footer__container {
+  background-color: #141414;
+  padding: 5rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+}
+
+.footer__content {
+  max-width: 1200px; /* Lebar maksimum konten footer */
+  margin: 0 auto; /* Pusatkan konten */
+}
+
+.footer__content h2 {
+  background-color: #77ffa4;
+  background-image: linear-gradient(to right, rgb(182, 244, 146), rgb(51, 139, 147));
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  margin-bottom: 3rem;
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+.testimonial-container {
+  display: flex; /* Flexbox untuk mengatur kartu testimoni */
+  justify-content: space-around; /* Ruang antar kartu */
+  flex-wrap: wrap; /* Jika tidak muat, pindah ke baris berikutnya */
+}
+
+.testimonial-card {
+  background-color: rgba(255, 255, 255, 0.1); /* Warna latar belakang kartu testimoni */
+  border-radius: 8px; /* Sudut membulat */
+  padding: 20px; /* Padding untuk kartu */
+  margin: 10px; /* Margin untuk kartu */
+  width: 250px; /* Lebar tetap untuk kartu */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); /* Bayangan untuk efek kedalaman */
+}
+
+.testimonial-card p {
+  font-style: italic; /* Miringkan teks testimoni */
+  margin-bottom: 10px; /* Jarak bawah teks testimoni */
+  text-align: center;
+  color: white;
+}
+
+.testimonial-card h3 {
+  font-weight: bold; /* Tebalkan nama klien */
+  text-align: center;
+  color: white;
+  
+}
+
+/* About Us CSS */
+.about_container {
+  background-color: #141414;
+  padding: 5rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+}
+
+.about_content {
+  max-width: 1200px; /* Lebar maksimum konten footer */
+  margin: 0 auto; /* Pusatkan konten */
+}
+
+.about_content h2 {
+  background-color: #77ffa4;
+  background-image: linear-gradient(to right, rgb(182, 244, 146), rgb(51, 139, 147));
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  margin-bottom: 3rem;
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+.about_content p {
+  font-size: 1.5rem;
+  margin-bottom: 3rem; /* Jarak bawah teks testimoni */
+  text-align: justify;
+  color: white;
+}
+
+.about_introduction{
+  margin-bottom: 10px;
+}
+
+.chartType{
+  height: 300px;
+  flex:1;
+  display: flex;
+  justify-content: center;
+}
+
+.chartText{
+  flex: 1;
+  flex-shrink: 0;
+}
+
+.chartText p {
+  margin-bottom: 0px;
+}
+
+#barText{
+  margin-left: 20px;
+}
+
+#pieText{
+  margin-right: 20px;
+}
+
+
+
+.chart{
+  display: flex;
+  align-items: center;
+}
+
+#barChart{
+  position: absolute;
+}
+
+.about_container{
+  padding: 0 20px;
+}
+
+.sumber p{
+  color: white;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 10.5px;
+}
+
+.sumber a{
+  color: #a1ea8f;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 10.5px;
+}
+
+@media screen and (max-width: 500px) {
+  .services {
+    grid-template-columns: repeat(1, 223px);
+  }
+
+  .services h1 {
+    font-size: 1.2rem;
+  }
+
+  .services__card {
+    width: 300px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .services {
+    grid-template-columns: repeat(2, 223px);
+  }
+
+  .services h1 {
+    font-size: 2rem;
+    margin-top: 3rem;
+  }
+
+  .about_content{
+    align-items: center;
+  }
+  .chart{
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #barChart{
+    position: static;
+  }
+
+  .chartType{
+    flex: none;
+    width: 480px;
+  
+  }
+  .chartText{
+    margin-top: 20px;
+  }
+  #barText{
+    margin-left: 0px;
+  }
+  #pieText{
+    margin-right: 0px;
+  }
+
+}
+
+
+  
+
+  
+  
+  
+  

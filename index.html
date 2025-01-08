@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutor Online</title>
+    <link rel="stylesheet" href="src/Home/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="navbar__container">
+        <div class="navbar__main">
+
+            <a id=cart__button href="cart.html">
+                <div class="cart">
+                  <i class="bi bi-cart2"></i>
+                  <div id="cartAmount" class="cartAmount">0</div>
+                </div>
+            </a>
+
+            <a id="navbar__logo">Tutor Online</a>
+
+        </div>
+
+        <div class="navbar__toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+
+        <ul class="navbar__menu">
+            <li class="navbar__item">
+                <a href="index.html" class="navbar__links">Home</a>
+            </li>
+            <li class="navbar__item">
+                <a href="shop.html" class="navbar__links">Shop</a>
+            </li>
+            <li class="navbar__item">
+              <a href="quizHome.html" class="navbar__links">Test Masuk</a>
+            </li>
+            <li class="navbar__btn">
+                <a class="button buttonGreen" id="accountButton">Sign In</a>
+            </li>
+        </ul>
+    </div>
+  </nav>
+
+   <!-- Main Section -->
+   <div class="main">
+    <div class="main__container">
+      <div class="main__content">
+        <h1>Tutor Matematika</h1>
+        <h2>Berbagai Peminatan</h2>
+        
+      </div>
+      
+    </div>
+</div>
+
+<!-- about us -->
+<div class="about_container">
+  <div class="about_content">
+    <h2>Tentang Kami</h2>
+    <p>Kami berkomitmen untuk membantu meningkatkan kualitas pendidikan melalui tutor online kami, dengan menyediakan pengajar terbaik dalam bidang matematika. Hal ini dilakukan agar masyarakat Indonesia dapat memiliki kesempatan untuk belajar matematika untuk dapat bersaing secara global. </p>
+
+    <div class="chart">
+
+      <div class="chartType">
+        <canvas id="barChart"></canvas>
+      </div>
+      
+      <div class="chartText" id="barText">
+        <p>Menurut PISA (2022), masyarakat Indonesia menempati peringkat ke-6 dalam skor kemampuan matematika untuk negara-negara ASEAN. Hal ini membuat kami terdorong untuk membuat tutor online ini. Kami berharap dengan adanya tutor online ini, kemampuan matematika masyarakat Indonesia dapat meningkat. </p>
+      </div>
+
+    </div>
+    <div class="sumber">
+      <p> Sumber : <a href="https://dataindonesia.id/pendidikan/detail/daftar-negara-dengan-kemampuan-matematika-terbaik-di-asean-pada-2022"> https://dataindonesia.id/pendidikan/detail/daftar-negara-dengan-kemampuan-matematika-terbaik-di-asean-pada-2022</a></p>
+    </div>
+   
+    <div class="chart">
+      <div class="chartText" id="pieText">
+        <p> Bergabunglah hari ini dengan 100.000 anggota kami yang telah memilih peminatannya! Mari kita bersama-sama mengembangkan kemampuan matematika dengan cara yang menyenangkan.  </p>
+      </div>
+
+      <div class="chartType">
+        <canvas id="pieChart"></canvas>
+      </div>
+
+    </div>
+</div>
+
+<!-- Services Section -->
+<div class="services">
+    <h1>Lihat Penawaran Kami</h1>
+    <div class="services__container">
+      <div class="services__card">
+        <h2>Kelas Aktuaria</h2>
+        <p>Disarankan untuk nilai test masuk diatas 80</p>
+        <a href="aktuaria.html">
+          <button>Get Started</button>
+        </a>
+      </div>
+      <div class="services__card">
+        <h2>Kelas Data Analitik</h2>
+        <p>Disarankan untuk nilai test masuk diatas 70</p>
+        <a href="Data_Analitik.html">
+          <button>Get Started</button>
+        </a>
+      </div>
+      <div class="services__card">
+        <h2>Kelas Optimasi dan Dinamika</h2>
+        <p>Disarankan untuk nilai test masuk diatas 50</p>
+        <a href="Opdim.html">
+          <button>Get Started</button>
+        </a>
+    </div>
+    <div class="services__card">
+        <h2>Kelas Matematika Terapan</h2>
+        <p>Tidak ada batas nilai test masuk</p>
+        <a href="MatTerapan.html">
+          <button>Get Started</button>
+        </a>
+    </div>
+    </div>
+    
+  </div>
+
+  <div class="footer__container">
+    <div class="footer__content">
+      <h2>Testimoni Klien</h2>
+      <div class="testimonial-container">
+          <div class="testimonial-card">
+              <p>"Pelayanan yang sangat baik dan cepat! Sangat puas dengan hasilnya."</p>
+              <h3>- Klien A</h3>
+          </div>
+          <div class="testimonial-card">
+              <p>"Kualitas materi pembelajaran luar biasa! Sangat membantu perkembangan saya."</p>
+              <h3>- Klien B</h3>
+          </div>
+          <div class="testimonial-card">
+              <p>"Tim yang profesional dan siap membantu kapan saja. Sangat direkomendasikan!"</p>
+              <h3>- Klien C</h3>
+          </div>
+          <div class="testimonial-card">
+              <p>"Pengalaman belajar yang menyenangkan dan bermanfaat. Terima kasih!"</p>
+              <h3>- Klien D</h3>
+          </div>
+      </div>
+    </div>
+  </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="src/Home/app.js"></script>
+</body>
+</html>
