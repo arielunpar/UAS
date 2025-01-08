@@ -44,5 +44,5 @@ function signIn() {
   });
   
   signupAnchor.addEventListener("click", function () {
-    window.location.href = "signup.html";
+    window.location.href = "signUp.html";
   });
