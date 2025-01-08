@@ -319,7 +319,7 @@
       rgba(19, 19, 19, 0.8) 50%,  /* Gradasi ringan di pertengahan */
       rgba(19, 19, 19, 1) 100% 
     ),
-    url('../images/img-11.jpg');
+    url('../../images/img-11.jpg');
 }
 
 .main__content {
@@ -457,7 +457,7 @@
       rgba(19, 19, 19, 0.5) 50%,  /* Gradasi ringan di pertengahan */
       rgba(19, 19, 19, 1) 100%
     ),
-    url('../images/Aktuaris.webp');
+    url('../../images/Aktuaris.webp');
   background-size: cover;
   position: relative;
   color: #fff;
@@ -473,7 +473,7 @@
       rgba(0, 0, 0, 0) 0%,
       rgba(17, 17, 17, 0.9) 100%
     ),
-    url('../images/DataAnalis.webp');
+    url('../../images/DataAnalis.webp');
 }
 
 .services__card:nth-child(3) {
@@ -482,7 +482,7 @@
       rgba(0, 0, 0, 0) 0%,
       rgba(17, 17, 17, 0.9) 100%
     ),
-    url('../images/Opdim.webp');
+    url('../../images/Opdim.webp');
 }
 
 .services__card:nth-child(4) {
@@ -491,7 +491,7 @@
       rgba(0, 0, 0, 0) 0%,
       rgba(17, 17, 17, 0.9) 100%
     ),
-    url('../images/MatTerapan.webp');
+    url('../../images/MatTerapan.webp');
 }
 
 .services__card h2 {
