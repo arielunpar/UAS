@@ -733,11 +733,19 @@
 
   .chartType{
     flex: none;
-    width: 380px;
+    width: 400px;
   
   }
 }
 
+@media screen and (max-width: 400px) {
+
+  .chartType{
+    flex: none;
+    width: 350px;
+  }
+  
+}
 
   
 
